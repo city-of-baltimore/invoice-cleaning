@@ -1,7 +1,7 @@
 library(readxl)
 library(plyr)
 
-table1 <- read_excel("C:/Users/Brendan.Hellweg/Desktop/Invoice Payments Folder/November 2019 Table.xlsx")
+table1 <- read_excel("C:/Users/Brendan.Hellweg/Desktop/Invoice Payments Folder/January 2020 Table.xlsx")
 payments <-table1[table1$`Days Since Creation`>30,]
 id <- payments$`Execution ID`
 location <- payments$Location
@@ -393,5 +393,5 @@ payments$agency <- mapvalues(payments$agency, from=c("AUDITS",
 
                               ))
 
-write.csv(payments,"C:/Users/Brendan.Hellweg/Desktop/Invoice Payments Folder/CleanNov.csv")
+write.csv(payments,"C:/Users/Brendan.Hellweg/Desktop/Invoice Payments Folder/CleanJan.csv")
 
